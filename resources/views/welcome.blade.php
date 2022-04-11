@@ -2,7 +2,7 @@
 @section('content')
 <div class="section1 bg-red ">
     <div class="container text-center">
-        <h1 class="title"> AccountsGalore </h1>
+        <h1 class="title"> KlaimGaransi </h1>
         <h3 class="sub-title pt-3 pb-4"> Auto Account Replacement </h3>
     </div>
 </div>
@@ -29,7 +29,7 @@
                         <span class="fa fa-usd" aria-hidden="true"> </span>
                     </div>
                     <div class="col-md-8 col-xs-8 ">
-                        <p class=""> For more information please check our <a href="https://discord.gg/T3P9a8G">Discord</a> </p>
+                        <p class=""> For more information please check our <a href="https://t.me/marvelixgaransi">telegram</a> </p>
                     </div>
                 </div>
 

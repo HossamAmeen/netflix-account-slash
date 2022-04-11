@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>AccountsGalore</title>
+    <title>KlaimGaransi</title>
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
@@ -39,7 +39,7 @@
                         <a class="nav-link" href="{{route('tutorial')}}">Tutorials</a>-->
                     </li>
                     <li class="nav-item {{ Request::routeIs('support') ? 'active' : '' }} ">
-                        <a class="nav-link" href="https://discord.gg/T3P9a8G">New Discord / Support</a>
+                        <a class="nav-link" href="https://t.me/marvelixgaransi">telegram / Support</a>
                     </li>
                     <li class="nav-item {{ Request::routeIs('support') ? 'active' : '' }} ">
                         <a class="nav-link" href="{{route('pricing')}}">Pricing</a>

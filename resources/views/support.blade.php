@@ -13,7 +13,7 @@
        
                 <div class="col-md-12">
                 <img class="support-shopee"style="" class="img-responsive"
-                        src="{{url('/images/support/shopee.png')}}" alt="" srcset=""> <span class="support-title"> : AccountsGalore </span>
+                        src="{{url('/images/support/shopee.png')}}" alt="" srcset=""> <span class="support-title"> : KlaimGaransi </span>
                 </div>
             </div>
 

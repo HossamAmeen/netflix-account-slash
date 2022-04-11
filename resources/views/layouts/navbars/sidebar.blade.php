@@ -7,7 +7,7 @@
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
             <!-- <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="..."> $_COOKIE-->
-            AccountsGalore
+            KlaimGaransi
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -16,7 +16,7 @@
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
                         <!-- <img alt="Image placeholder" src="{{ asset('argon') }}/img/theme/team-1-800x800.jpg"> -->
-                        AccountsGalore
+                        KlaimGaransi
                         </span>
                     </div>
                 </a>
