@@ -1,0 +1,30 @@
+.panel-primary {
+
+
+
+}
+
+.panel-heading {
+    background: #3490dc;
+    height: 35px;
+    margin-bottom: 1%;
+    border-radius: 2%;
+}
+
+.panel-title {
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+
+.panel-body {
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+
+.faq-panel-a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+

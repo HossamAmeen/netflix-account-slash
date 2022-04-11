@@ -1,0 +1,33 @@
+.support-discord {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.support-title {
+    padding-right: 40px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.support-description {
+    width: 370px;
+    margin: auto;
+    font-size:  1.3rem;
+}
+
+.support-shopee {
+    height: 250px   ; width: 250px ;
+}
+
+
+@media (max-width: 765px) {
+    .support-shopee {
+        height: 150px   ; width: 150px ;
+    }
+
+    .support-title {
+        font-size: 2rem;
+    }
+
+}
+    
