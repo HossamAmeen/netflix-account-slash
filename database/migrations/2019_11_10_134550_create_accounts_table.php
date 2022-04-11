@@ -20,7 +20,7 @@ class CreateAccountsTable extends Migration
             $table->string('password');
             $table->string('code_link')->unique();
             $table->boolean('used');
-            $table->timestamp('replace_date')->nullable()->default(time());
+            $table->timestamp('replace_date')->nullable();
 
             $table->index(['category', 'used']);
 
