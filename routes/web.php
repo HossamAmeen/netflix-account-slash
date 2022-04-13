@@ -57,9 +57,9 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
 
 
     Route::get('/create/{model}/{accountCategory}', ['as' => 'account.create', 'uses' => 'AccountController@create']);
-
+    Route::get('/edit/{id}', ['as' => 'account.edit', 'uses' => 'AccountController@edit']);
     Route::post('/store/{model}/{accountCategory}', ['as' => 'account.store', 'uses' => 'AccountController@storeAccounts']);
-
+    Route::put('/update/{id}', ['as' => 'account.update', 'uses' => 'AccountController@updateAccounts']);
 
     Route::resource('netflix', 'NetflixAccountController', ['except' => ['index', 'show', 'store']]);
 
@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     
 
     //new
+   
     Route::get('account/search', ['as' => 'a.search', 'uses' => 'AccountController@search']);
     Route::post('delete/replacementaccount', ['as' => 'ra.delete', 'uses' => 'ReplacementAccountController@deleteReplacementAccounts']);
     Route::post('account/enable', ['as' => 'a.enable', 'uses' => 'AccountController@enable']);

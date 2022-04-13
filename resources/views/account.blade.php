@@ -39,7 +39,7 @@
                             <p> We are hoping for everyone understanding. Thank you! </p>
                           -->
                     <button type="submit" class="mb-3 card-text btn bg-red text-white">
-                        <a href="{{url('replacement/'.$account->id)}}" style="color: white">
+                        <a href="{{url('replacement/'.$account->code_link)}}" style="color: white">
                         Replace my Account
                         </a>
                     </button>
@@ -48,6 +48,7 @@
                         The website is under maintenance, please check our discord for
                         more information
                     </p> --}}
+                   
                     <h5 class="main-font main-text-red">Take Note!</h5>
                     <p class="card-text text-dark">
                         1. Do not change the password or else your warranty will be void

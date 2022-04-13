@@ -41,9 +41,9 @@
                     <li class="nav-item {{ Request::routeIs('support') ? 'active' : '' }} ">
                         <a class="nav-link" href="https://t.me/marvelixgaransi">telegram / Support</a>
                     </li>
-                    <li class="nav-item {{ Request::routeIs('support') ? 'active' : '' }} ">
+                    {{-- <li class="nav-item {{ Request::routeIs('support') ? 'active' : '' }} ">
                         <a class="nav-link" href="{{route('pricing')}}">Pricing</a>
-                    </li>
+                    </li> --}}
                   
                 </ul>
             </div>

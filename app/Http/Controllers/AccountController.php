@@ -23,6 +23,16 @@ class AccountController extends Controller
 
     }
 
+    public function updateAccounts($id, Request $request) {
+
+        $account = Account::findOrFail($id);
+        $date = Carbon::createFromFormat('Y-m-d H:i:s', $account->created_at);
+        $daysToAdd = $request->expiration;
+        $date = $date->addMonths($daysToAdd);
+        // return $date;
+        $account->update(['expiration_date'=>$date]);
+        return redirect()->back()->withStatus(__('Your inputs has been successfully Passed to a Job Queue, Please wait .'));
+    }
 
     /**
      * display all netflix accounts
@@ -74,9 +84,13 @@ class AccountController extends Controller
         return view('account'  ,compact('account',['account_id'=>$account->id]) );
     }
 
-    public function replacement($id)
+    public function replacement($code)
     {
-        $account = Account::findOrFail($id);
+        $account = Account::where('code_link',$code)->first();
+        // if(!isset($account)){
+           
+        //     return redirect()->route('404');
+        // }
         $error_message = null;
         $replace_account = null;
         if ($account->disabled == 1 || $account->expiration_date < Carbon::now() )
@@ -84,7 +98,7 @@ class AccountController extends Controller
             $error_message = "this account is not  available";
         }
 
-        elseif( Carbon::now()->subDays(2)->lte($account->replace_date) ){
+        elseif( Carbon::now()->subDays(1)->lte($account->replace_date) ){
             $error_message = "you can n't able to replace account now";
         }
         else{
@@ -92,15 +106,17 @@ class AccountController extends Controller
             // return $replace_account ;
             if($replace_account != null){
                 $account->update(['replace_date'=>now()]);
-                $replace_account->update([ 'account_id'=>$id, 'used'=>1, 'category'=>  $account->category]);
+                $replace_account->update([ 'account_id'=>$account->id, 'used'=>1, 'category'=>  $account->category]);
     
             }
             else{
                 $error_message = "no replace account is available now ";
             }
         }
-      
-        return view( 'replacement', compact('replace_account','error_message') );
+        // return $error_message ;
+        session()->flash('message', $error_message);
+        // return session('message'); 
+        return view( 'replacement', compact('replace_account','account','error_message') );
     }
 
     public function netflix($codeLink)
@@ -143,5 +159,9 @@ class AccountController extends Controller
         return view('account.create');
     }
 
+    public function edit($id) {
+        $account = Account::findOrFail($id);
+        return view('account.edit', compact('account'));
+    }
 
 }

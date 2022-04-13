@@ -8,43 +8,53 @@
                 <div class="card-header bg-red text-white">Your Netflix Account</div>
                 <div class="mt-3 card-body text-dark">
                     @if($error_message == null)
-                    <span class="font-weight-bold">
-                        Username/Email:
-                    </span>
-                    <p class="card-text">
-                        {{ $replace_account->email }}
-                    </p>
-                    <span class="font-weight-bold">
-                        Password:
-                    </span>
-                    <p class="card-text">
-                        {{ $replace_account->password }}
-                    </p>
+                        <span class="font-weight-bold">
+                            Username/Email:
+                        </span>
+                        <p class="card-text">
+                            {{ $replace_account->email }}
+                        </p>
+                        <span class="font-weight-bold">
+                            Password:
+                        </span>
+                        <p class="card-text">
+                            {{ $replace_account->password }}
+                        </p>
 
-                    <span class="font-weight-bold">
-                        Expiration Date:
-                    </span>
-                    <p class="card-text text-yellow">
-                        {{ $replace_account->expiration_date }}
-                    </p>
-
-                    {{-- <div class="d-flex justify-content-center mb-2">
-                        <div class="spinner-border main-text-red text-center" role="status">
-                        </div>
-                    </div> --}}
-                    <!--
-                            <p> Website will be undermaintenance until March 28 2018, 11:59pm GMT + 3 </p>
-                            <p> We will compensate everyone by adding 3 more days to their expiration date </p>
-                            <p> Reason for maintenance: MoxyProxy is down ATM and we are waiting for them to fix their server issue. We do not own moxy and we have spend more than 200$ for alternative proxies but they didnt work</p>
-                            <p> We are hoping for everyone understanding. Thank you! </p>
-                          -->
-                    <button type="submit" class="mb-3 card-text btn bg-red text-white">
-                        <a href="{{url('replacement/'.$replace_account->account_id)}}" style="color: white">
-                            Replace my Account
-                        </a>
-                    </button>
+                        <span class="font-weight-bold">
+                            Expiration Date:
+                        </span>
+                        <p class="card-text text-yellow">
+                            {{ $replace_account->expiration_date }}
+                        </p>
                     @else
-                    <h5 class="main-font main-text-red">{{$error_message}}</h5>
+                        <span class="font-weight-bold">
+                            Username/Email:
+                        </span>
+                        <p class="card-text">
+                            {{ $account->email }}
+                        </p>
+                        <span class="font-weight-bold">
+                            Password:
+                        </span>
+                        <p class="card-text">
+                            {{ $account->password }}
+                        </p>
+
+                        <span class="font-weight-bold">
+                            Expiration Date:
+                        </span>
+                        <p class="card-text text-yellow">
+                            {{ $account->expiration_date }}
+                        </p>   
+                        <h5 class="main-font main-text-red">{{$error_message}}</h5> 
+                        <button type="submit" class="mb-3 card-text btn bg-red text-white">
+                            <a href="{{url('replacement/'.$account->code_link)}}" style="color: white">
+                                Replace my Account
+                            </a>
+                        </button>
+                    
+                    {{-- <h5 class="main-font main-text-red">{{$error_message}}</h5> --}}
                     @endif
                     <p class="card-text main-text-red"></p>
                     {{-- <p class="text-info card-text">

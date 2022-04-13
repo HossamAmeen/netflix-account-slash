@@ -48,6 +48,7 @@
                                 <th scope="col">{{ __('Password') }}</th>
                                 <th scope="col">{{ __('Code Link') }}</th>
                                 <th scope="col">{{ __('Creation Date') }}</th>
+                                <th scope="col">{{ __('Expiration Date') }}</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -70,6 +71,7 @@
                                         href="{{ url('/')}}/netflix/{{$account->code_link}}">{{ $account->code_link }}</a>
                                 </td>
                                 <td>{{ $account->created_at->format('d/m/Y H:i') }}</td>
+                                <td>{{ $account->expiration_date }}</td>
                                 <td>
                                 @if ($account->disabled == 0)
                                 <form method="post" action="{{ route('a.disable') }}" autocomplete="off">
@@ -81,6 +83,7 @@
 
                                     <div class="">
                                         <button type="submit" class="btn btn-danger my-4">Disable</button>
+                                        <a href="{{ url('admin/edit/'.$account->id)}}" class="btn btn-primary my-4" style="color: white">edit</a>
                                     </div>
                                 </form>
                                 @else
@@ -93,9 +96,11 @@
 
                                     <div class="">
                                         <button type="submit" class="btn btn-primary my-4">Enable</button>
+                                        
                                     </div>
                                 </form>
                                 @endif
+                               
                                 </td>
                             </tr>
                             @endforeach
