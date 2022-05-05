@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>KlaimGaransi</title>
 
-    <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css" >
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet" type="text/css" >
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/tutorial.css') }}" rel="stylesheet">
     <link href="{{ asset('css/support.css') }}" rel="stylesheet">

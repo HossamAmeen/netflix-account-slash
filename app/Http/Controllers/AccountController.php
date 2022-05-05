@@ -87,25 +87,21 @@ class AccountController extends Controller
     public function replacement($code)
     {
         $account = Account::where('code_link',$code)->first();
-        // if(!isset($account)){
-           
-        //     return redirect()->route('404');
-        // }
+    
         $error_message = null;
         $replace_account = null;
         if ($account->disabled == 1 || $account->expiration_date < Carbon::now() )
         {
             $error_message = "this account is not  available";
         }
-
         elseif( Carbon::now()->subDays(1)->lte($account->replace_date) ){
-            $error_message = "you can n't able to replace account now";
+            $error_message = "you can n't able to replace account now" ;
         }
         else{
             $replace_account = ReplacementAccount::where('used', 0)->first();
             // return $replace_account ;
             if($replace_account != null){
-                $account->update(['replace_date'=>now()]);
+                $account->update(['email'=>$replace_account->email,'password'=>$replace_account->passsword,'replace_date'=>now()]);
                 $replace_account->update([ 'account_id'=>$account->id, 'used'=>1, 'category'=>  $account->category]);
     
             }
@@ -116,6 +112,7 @@ class AccountController extends Controller
         // return $error_message ;
         session()->flash('message', $error_message);
         // return session('message'); 
+        // return view('account'  ,compact('account',['account_id'=>$account->id]) );
         return view( 'replacement', compact('replace_account','account','error_message') );
     }
 
