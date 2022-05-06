@@ -101,7 +101,7 @@ class AccountController extends Controller
             $replace_account = ReplacementAccount::where('used', 0)->first();
             // return $replace_account ;
             if($replace_account != null){
-                $account->update(['email'=>$replace_account->email,'password'=>$replace_account->passsword,'replace_date'=>now()]);
+                $account->update(['email'=>$replace_account->email,'password'=>$replace_account->password,'replace_date'=>now()]);
                 $replace_account->update([ 'account_id'=>$account->id, 'used'=>1, 'category'=>  $account->category]);
     
             }
