@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+/* Constant styles  */
+$mainColor: #e50914;
+$secondColor: #2d2d2e;
+
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/HelveticaWorld-Bold.ttf);
+}
+
+@font-face {
+  font-family: latbl;
+  src: url(../fonts/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: latbo;
+  src: url(../fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: latr;
+  src: url(../fonts/Lato-Regular_1.ttf);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+body {
+  font-family: mainFont;
+  padding-right: 0 !important;
+  // font-size: 16px;
+  // height: 10000px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0 !important;
+}
+
+.clear {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  &:focus{
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.btn_style {
+  border-radius: 83px;
+  background-color: $mainColor;
+  border: 0;
+  color: #fff;
+  padding: 10px 25px;
+  border: 1px solid $mainColor;
+  &:hover {
+    background-color: #fff !important;
+    color: $secondColor !important;
+    border-color: #fff;
+  }
+}
+.burger_menue {
+  display: none;
+}
+
+.slider-item {
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+/* Style */
+
+.mynavbar {
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    .logo {
+      margin-right: 30px;
+      width: 25%;
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .links {
+      ul {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          margin-left: 30px;
+          a {
+            color: #fff;
+            font-size: 0.9rem;
+            position: relative;
+            padding-bottom: 5px;
+            transition: all 0.3s ease-in-out;
+            &::after {
+              width: 0;
+              transition: all 0.3s ease-in-out;
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #fff;
+              height: 3px;
+            }
+            &:hover {
+              &::after {
+                width: 50%;
+              }
+            }
+          }
+          &.active {
+            a {
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 50%;
+                left: 0;
+                background-color: #fff;
+                height: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  @extend %backgroundImage;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(12, 11, 11, 0.42)
+    );
+  }
+  .header_content {
+    position: relative;
+    z-index: 9;
+    width: fit-content;
+    h5,
+    p,
+    h1 {
+      color: #fff;
+      margin-top: 15px;
+    }
+    h1 {
+      font-size: 3rem;
+      span {
+        position: relative;
+        display: inline-block;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 80px;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          margin-top: 6px;
+          left: 0;
+          background-color: $mainColor;
+          z-index: -1;
+        }
+      }
+    }
+    h5 {
+      font-size: 2rem;
+    }
+    p {
+      width: 50%;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      a {
+        margin-left: 10px;
+        background-color: transparent;
+        border: 2px solid #fff;
+      }
+    }
+  }
+}
+
+#premiumBlanModal{
+  .modal-dialog{
+    max-width: 400px;
+  }
+  .modal-content{
+    border-radius: 0;
+    border: 0;
+    padding: 35px 10px;
+    .closemodal{
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      i{
+        color: $mainColor;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .modal-body{
+    text-align: center;
+    h5{
+      font-size: 2rem;
+      font-family: latbo;
+      margin-bottom: 30px;
+    }
+    h1{
+      color: $mainColor;
+      margin: 30px 0;
+    }
+    h6, h4, p{
+      font-family: latbo;
+    }
+    h4{
+      color: #898989;
+      font-size: 1.3rem;
+    }
+    p{
+      width: 50%;
+      margin: auto;
+      margin: 30px auto;
+    }
+    a{
+      &:hover{
+        border-color: $mainColor;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 524px) and (-webkit-min-device-pixel-ratio: 1.1) {
+  html{
+    font-size: 13px;
+  }
+  .mynavbar .wrapper{
+    flex-direction: column;
+    justify-content: center;
+    .logo{
+      width: 70%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .mynavbar .wrapper .links ul li{
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .header{
+    padding: 50px 0;
+    padding-top: 100px;
+    text-align: center;
+    .header_content{
+      p{
+        width: 100%;
+      }
+      .links{
+        justify-content: center;
+      }
+    }
+  }
+  .header .header_content h1 span::after{
+    height: 50px;
+  }
+}
+
+%backgroundImage {
+  background-position: center;
+  background-size: cover;
+}
+
+%inilizeFonrtAwsome_Before_After {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+%transition {
+  transition: all 0.3s ease-in-out;
+}
+
+%overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%spcfies-number-of-line {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
