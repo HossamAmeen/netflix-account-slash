@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/css/aos.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/aos.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
   <title>Document</title>
 </head>
 
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="logo">
-          <a href=""><img src="./assets/images/logo.svg" alt=""></a>
+          <a href=""><img src="{{asset('assets/images/logo.png')}}" alt=""></a>
         </div>
         <div class="links">
           <ul class="list-unstyled">
@@ -32,9 +32,9 @@
   </div>
 
   <!-- header -->
-  <div class="header" style="background-image: url('./assets/images/header.png');">
+  <div class="header" style="background-image: url('{{asset('assets/images/header.png')}}');">
     <div class="container">
-      <div class="header_content">
+      <div class="header_content">a
         <h1>Welcome to KlaimGa<span>ransi&nbsp;</span></h1>
         <h5>Auto Account Replacement</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -75,11 +75,11 @@
 
 
 
-  <script src="./assets/js/jquery-3.3.1.min.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/aos.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+  <script src="{{asset('assets/js/popper.min.js')}}"></script>
+  <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/js/aos.js')}}"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
 </body>
 
 </html>
