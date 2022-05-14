@@ -5,12 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="{{asset('assets/images/logo.ico')}}" type="image/x-icon">
   <link rel="stylesheet" href="{{asset('assets/css/all.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/aos.css')}}">
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-  <title>Home</title>
+  <title>Document</title>
 </head>
 
 <body>
@@ -33,9 +32,9 @@
   </div>
 
   <!-- header -->
-  <div class="header" style="background-image: url({{asset('assets/images/header.png')}});">
+  <div class="header" style="background-image: url('{{asset('assets/images/header.png')}}');">
     <div class="container">
-      <div class="header_content">
+      <div class="header_content">a
         <h1>Welcome to KlaimGa<span>ransi&nbsp;</span></h1>
         <h5>Auto Account Replacement</h5>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
