@@ -95,7 +95,7 @@ class AccountController extends Controller
             $error_message = "this account is not  available";
         }
         elseif( Carbon::now()->subDays(1)->lte($account->replace_date) ){
-            $error_message = "You can't replace account right now, wait 24 hrs" ;
+            $error_message = "Kamu tidak bisa menekan replace my account sekarang, silahkan tunggu 24 jam dan coba lagi" ;
         }
         else{
             $replace_account = ReplacementAccount::where('used', 0)->first();
