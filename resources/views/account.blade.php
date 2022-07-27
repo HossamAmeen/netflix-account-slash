@@ -51,6 +51,27 @@
                    
                     <h5 class="main-font main-text-red">Take Note!</h5>
                     <p class="card-text text-dark">
+                        1. Jangan mengubah email dan password akun diatas, tidak boleh mengubah apapun didalam aplikasi netflix,
+                        hanya diperbolehkan mengubah subtitles hanya saat sedang menonton selain itu tidak boleh mengubah apapun, 
+                        jika melanggar garansi hangus dan no refund 
+                    </p>
+                    <p class="card-text main-text-red">
+                        2. Jangan klik tombol replace my account jika akun kamu masih berfungsi dan bisa nonton dengan lancar
+                    </p>
+                    <p class="card-text text-dark">
+                        3. Boleh Tekan tombol replace my account hanya jika akun kamu error dan tidak bisa dibuka lagi
+                    </p>
+                    <p class="card-text text-dark">
+                    4. Link ini jangan di sebarkan ke orang lain! Hanya untuk pemakaian pribadi, jika ketahuan maka GARANSI HANGUS
+                    </p>
+                    <p class="card-text text-dark">
+                    5. Kamu bisa minta akun pengganti dengan klik REPLACE MY ACCOUNT 1x saja setiap 24 jam, pastikan hanya menekan 
+                    tombol replace my account hanya jika akun netflix diatas sudah tidak bisa kamu gunakan 
+                    </p>
+                    <p class="card-text text-dark">
+                    Jika ada yang ingin kamu tanyakan
+                    Silahkan chat kami di telegram <a href="https://t.me/marvelixgaransi">https://t.me/marvelixgaransi</a>
+                    {{-- <p class="card-text text-dark">
                         1. Do not change the password or else your warranty will be void
                     </p>
                     <p class="card-text main-text-red">
@@ -60,7 +81,7 @@
                     </p>
                     <p class="card-text text-dark">
                         3. We recommend 1 user per 1 link only to prevent getting
-                        blocked!!!
+                        blocked!!! --}}
                     </p>
                 </div>
             </div>

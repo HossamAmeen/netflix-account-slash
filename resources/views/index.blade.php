@@ -38,20 +38,11 @@
       <div class="header_content">
         
         <h1>Welcome to KlaimGa<span>ransi&nbsp;</span></h1>
-        <h5>BACA PERATURAN DIBAWAH !</h5>
-        <pre style="color: white; ;font-weight: bold; font-size: 90%">
-  1. Jangan mengubah email dan password akun diatas, tidak boleh mengubah apapun didalam aplikasi netflix,
-    hanya diperbolehkan mengubah subtitles hanya saat sedang menonton selain itu tidak boleh mengubah apapun, 
-    jika melanggar garansi hangus dan no refund 
-  2. Jangan klik tombol replace my account jika akun kamu masih berfungsi dan bisa nonton dengan lancar
-  3. Boleh Tekan tombol replace my account hanya jika akun kamu error dan tidak bisa dibuka lagi
-  4. Link ini jangan di sebarkan ke orang lain! Hanya untuk pemakaian pribadi, jika ketahuan maka GARANSI HANGUS
-  5. Kamu bisa minta akun pengganti dengan klik REPLACE MY ACCOUNT 1x saja setiap 24 jam, pastikan hanya menekan 
-  tombol replace my account hanya jika akun netflix diatas sudah tidak bisa kamu gunakan 
-
-  Jika ada yang ingin kamu tanyakan
-  Silahkan chat kami di telegram <a href="https://t.me/marvelixgaransi">here</a>
-        </pre>
+        <h5>Auto Account Replacement</h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
        
         <div class="links">
           <button class="btn btn_style" data-bs-toggle="modal" data-bs-target="#premiumBlanModal">Premium Plan</button>
